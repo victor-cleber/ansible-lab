@@ -1,0 +1,11 @@
+[webservers]
+ws01 ansible_host=192.168.1.150
+ws02 ansible_host=192.168.1.151
+
+[loadbalancers]
+lb01 ansible_host=192.168.1.200
+
+# Group 'all' with all servers
+[all:children]
+webservers
+loadbalancers 
